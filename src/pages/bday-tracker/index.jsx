@@ -2,6 +2,15 @@ import { useState } from 'react'
 import { useAddBirthday } from "../../hooks/useAddBirthday";
 import { useGetBirthdays } from '../../hooks/useGetBirthdays';
 
+//imports for delete bday
+//import { doc, deleteDoc } from "firebase/firestore";
+//import { db } from "../../config/firebase-config";
+//const deleteBirthday = async (id) => {
+//deleteDoc(doc(db, "birthdays", String(id)));
+//console.log('Test Delete');
+//return ('Deleted')
+//}
+
 export const BdayTracker = () => {
     const { addBirthday } = useAddBirthday();
     const { birthdays } = useGetBirthdays();
@@ -47,13 +56,13 @@ export const BdayTracker = () => {
                 <h3> Birthdays</h3>
                 <ul>
                     {birthdays.map((birthday) => {
-                        const { personName, description, birthdate } = birthday;
+                        const { personName, description, birthdate, id } = birthday;
                         return (
                             <li>
                                 <h3>{personName}</h3>
                                 <h5>{birthdate}</h5>
                                 <p>{description}</p>
-
+                                <p>{id}</p>
                             </li>);
                     })}
                 </ul>
