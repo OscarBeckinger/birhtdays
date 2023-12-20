@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { useAddBirthday } from "../../hooks/useAddBirthday";
+import { useGetBirthdays } from '../../hooks/useGetBirthdays';
 
 export const BdayTracker = () => {
     const { addBirthday } = useAddBirthday();
+    const { birthdays } = useGetBirthdays();
     const [description, setDescription] = useState("");
     const [birthdate, setBirthdate] = useState("");
     const [personName, setPersonName] = useState("");
@@ -43,6 +45,18 @@ export const BdayTracker = () => {
             </div>
             <div className="birthdays">
                 <h3> Birthdays</h3>
+                <ul>
+                    {birthdays.map((birthday) => {
+                        const { personName, description, birthdate } = birthday;
+                        return (
+                            <li>
+                                <h3>{personName}</h3>
+                                <h5>{birthdate}</h5>
+                                <p>{description}</p>
+
+                            </li>);
+                    })}
+                </ul>
             </div>
         </>
     );
