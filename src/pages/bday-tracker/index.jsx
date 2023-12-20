@@ -2,13 +2,18 @@ import { useState } from 'react'
 import { useAddBirthday } from "../../hooks/useAddBirthday";
 import { useGetBirthdays } from '../../hooks/useGetBirthdays';
 
-//imports for delete bday
-//import { doc, deleteDoc } from "firebase/firestore";
-//import { db } from "../../config/firebase-config";
-//const deleteBirthday = async (id) => {
-//deleteDoc(doc(db, "birthdays", String(id)));
-//console.log('Test Delete');
-//return ('Deleted')
+//DELETE BIRTHDAY BUTTON AND IMPORTS (BUTTON IMPLEMENTED NEAR BOTTOM)
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../../config/firebase-config";
+const deleteBirthday = async (id) => {
+    deleteDoc(doc(db, "birthdays", String(id)));
+    console.log('Test Delete');
+    return ('Deleted')
+}
+
+//delete button test function
+//const btest = async (id) => {
+//    console.log(String(id))
 //}
 
 export const BdayTracker = () => {
@@ -63,6 +68,7 @@ export const BdayTracker = () => {
                                 <h5>{birthdate}</h5>
                                 <p>{description}</p>
                                 <p>{id}</p>
+                                <button onClick={() => deleteBirthday(id)}>Delete</button>
                             </li>);
                     })}
                 </ul>
