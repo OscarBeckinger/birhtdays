@@ -40,13 +40,9 @@ export const BdayTracker = () => {
                         <h2> September 2nd</h2>
                     </div>
                     <div className="summary">
-                        <div className="income">
-                            <h4>Income</h4>
-                            <p>$0.00</p>
-                        </div>
-                        <div className="expenses">
-                            <h4>Expenses</h4>
-                            <p>$0.00</p>
+                        <div className="amtBdays">
+                            <h4>Birthdays Count:</h4>
+                            <p>0</p>
                         </div>
                     </div>
                     <form className="add-bday" onSubmit={onSubmit}>
