@@ -22,7 +22,6 @@ export const BdayTracker = () => {
     const [description, setDescription] = useState("");
     const [birthdate, setBirthdate] = useState("");
     const [personName, setPersonName] = useState("");
-    const [bdayCount, setBdayCount] = useState(1); {/* set first state to lenght of documents in firestorm collection (where userID matches current usersID)  */ }
 
 
 
@@ -32,7 +31,6 @@ export const BdayTracker = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         addBirthday({ personName, description, birthdate });
-        setBdayCount(bdayCount + 1);
         setBirthdate("");
         setDescription("");
         setPersonName("");
@@ -53,7 +51,7 @@ export const BdayTracker = () => {
                     <div className="summary">
                         <div className="amtBdays">
                             <h4>Birthdays Count:</h4>
-                            <p>{bdayCount}</p>
+                            <p>{birthdays.length}</p>
                         </div>
                     </div>
                     <form className="add-bday" onSubmit={onSubmit}>
@@ -75,13 +73,7 @@ export const BdayTracker = () => {
                                 <h5>{birthdate}</h5>
                                 <p>{description}</p>
                                 {/* <p>{id}</p> */}
-                                <button onClick={() => {
-                                    deleteBirthday(id);
-                                    setBdayCount(bdayCount - 1);
-
-                                }}>
-                                    Delete
-                                </button>
+                                <button onClick={() => { deleteBirthday(id); }}>Delete</button>
                             </li>);
                     })}
                 </ul>
