@@ -22,6 +22,9 @@ export const BdayTracker = () => {
     const [description, setDescription] = useState("");
     const [birthdate, setBirthdate] = useState("");
     const [personName, setPersonName] = useState("");
+    const [bdayCount, setBdayCount] = useState(1); {/* set first state to lenght of documents in firestorm collection (where userID matches current usersID)  */ }
+
+
 
 
 
@@ -29,6 +32,9 @@ export const BdayTracker = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         addBirthday({ personName, description, birthdate });
+        setBdayCount(bdayCount + 1);
+
+
     };
     return (
         <>
@@ -42,7 +48,7 @@ export const BdayTracker = () => {
                     <div className="summary">
                         <div className="amtBdays">
                             <h4>Birthdays Count:</h4>
-                            <p>0</p>
+                            <p>{bdayCount}</p>
                         </div>
                     </div>
                     <form className="add-bday" onSubmit={onSubmit}>
@@ -54,7 +60,7 @@ export const BdayTracker = () => {
                 </div>
             </div>
             <div className="birthdays">
-                <h3> Birthdays</h3>
+                <h1> Birthdays: </h1>
                 <ul>
                     {birthdays.map((birthday) => {
                         const { personName, description, birthdate, id } = birthday;
@@ -63,8 +69,14 @@ export const BdayTracker = () => {
                                 <h3>{personName}</h3>
                                 <h5>{birthdate}</h5>
                                 <p>{description}</p>
-                                <p>{id}</p>
-                                <button onClick={() => deleteBirthday(id)}>Delete</button>
+                                {/* <p>{id}</p> */}
+                                <button onClick={() => {
+                                    deleteBirthday(id);
+                                    setBdayCount(bdayCount - 1);
+
+                                }}>
+                                    Delete
+                                </button>
                             </li>);
                     })}
                 </ul>
