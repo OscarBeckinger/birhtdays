@@ -8,7 +8,7 @@ I'm making a brithday tracking web applications to pratice full stack developmen
 yarn install
 ```
 
-Then, run the development server:
+-Run the development server:
 
 ```bash
 yarn start
