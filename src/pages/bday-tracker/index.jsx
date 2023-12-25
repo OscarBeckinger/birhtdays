@@ -33,6 +33,11 @@ export const BdayTracker = () => {
         e.preventDefault();
         addBirthday({ personName, description, birthdate });
         setBdayCount(bdayCount + 1);
+        setBirthdate("");
+        setDescription("");
+        setPersonName("");
+
+
 
 
     };
@@ -52,9 +57,9 @@ export const BdayTracker = () => {
                         </div>
                     </div>
                     <form className="add-bday" onSubmit={onSubmit}>
-                        <input type="text" placeholder="Birthday" required onChange={(e) => setBirthdate(e.target.value)} />
-                        <input type="text" placeholder="Name" required onChange={(e) => setPersonName(e.target.value)} />
-                        <input type="text" placeholder="Description" required onChange={(e) => setDescription(e.target.value)} />
+                        <input type="text" placeholder="Birthday" value={birthdate} required onChange={(e) => setBirthdate(e.target.value)} />
+                        <input type="text" placeholder="Name" value={personName} required onChange={(e) => setPersonName(e.target.value)} />
+                        <input type="text" placeholder="Description" value={description} required onChange={(e) => setDescription(e.target.value)} />
                         <button type="submit"> Add Birthday</button>
                     </form>
                 </div>
