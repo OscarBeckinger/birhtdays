@@ -35,7 +35,7 @@ export const BdayTracker = () => {
                     </div>
                     <div className="summary">
                         <div className="amtBdays">
-                            <h4>Birthdays Count:</h4>
+                            <h4>Birthdays Count: </h4>
                             <p>{birthdays.length}</p>
                         </div>
                     </div>
