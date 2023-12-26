@@ -1,0 +1,219 @@
+body {
+    background-color: rgb(11, 0, 21);
+}
+
+.bday-tracker {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #023047;
+}
+
+
+.bday-tracker h1 {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.amt {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.addbtn {
+    background-color: #fbc2f7;
+    border-radius: 100px;
+    box-shadow: rgba(185, 44, 187, 0.2) 0 -25px 18px -14px inset, rgba(185, 44, 187, .15) 0 1px 2px, rgba(185, 44, 187, .15) 0 2px 4px, rgba(185, 44, 187, .15) 0 4px 8px, rgba(185, 44, 187, .15) 0 8px 16px, rgba(185, 44, 187, .15) 0 16px 32px;
+    color: purple;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 10px;
+}
+
+.addbtn:hover {
+    box-shadow: rgba(185, 44, 187, .35) 0 -25px 18px -14px inset, rgba(185, 44, 187, .25) 0 1px 2px, rgba(185, 44, 187, .25) 0 2px 4px, rgba(185, 44, 187, .25) 0 4px 8px, rgba(185, 44, 187, .25) 0 8px 16px, rgba(185, 44, 187, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.form-box {
+    /*change width to stack entires*/
+    padding: 40px;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.form-box .text-box {
+    position: relative;
+}
+
+.form-box .text-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.profile-photo {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.sign-out-button {
+    border: none;
+    margin-top: 50px;
+    width: 150px;
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.sign-out-button:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list-title {
+    text-align: center;
+    color: #fbc2f7;
+}
+
+.birthdays {
+    margin-left: 430px;
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 45%;
+    background-color: rgb(11, 0, 21);
+}
+
+.birthdays ul {
+    list-style-type: '\1F381';
+    list-style-position: outside;
+    margin: 0%;
+    padding-left: 10%;
+
+}
+
+.list-item-div {
+    height: 125px;
+    background-color: #fbc2f7;
+    margin-right: 20%;
+    border-radius: 20px;
+}
+
+.birthdays li {
+    /*background-color: rgba(170, 255, 0, 0.409); helps see where they are/what im moving*/
+    position: relative;
+    text-align: center;
+}
+
+.del-btn {
+    border: none;
+    background-color: #fbc2f7;
+    position: relative;
+    top: 10%;
+    font-size: .8em;
+    line-height: 4em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ce0d0d;
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.outer {
+    position: relative;
+    top: -110px;
+    /*X button position*/
+    margin-left: 86%;
+    /*X button position*/
+    width: 35%;
+    margin-top: 0%;
+    cursor: pointer;
+}
+
+.inner {
+    width: inherit;
+    text-align: center;
+}
+
+
+
+.inner:before,
+.inner:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: inherit;
+    background: #ff077b;
+    left: 0;
+    transition: all .3s ease-in;
+}
+
+.inner:before {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.inner:after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+}
+
+.outer:hover button {
+    border: none;
+    opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+    transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+    top: 0;
+}
+
+.outer:hover .inner:after {
+    bottom: 0;
+}
