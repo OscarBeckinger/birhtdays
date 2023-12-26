@@ -11,6 +11,8 @@ yarn start
 
 -Open [http://localhost:3000](http://localhost:3000) with a browser to see the app.
 
+-Use a google account to sign in
+
 # Disclaimer:
 I'm currently working on the aesthetic and certain functions of this web app (please bear with me and thanks for your patience!)
 

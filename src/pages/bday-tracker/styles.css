@@ -118,6 +118,7 @@ body {
 }
 
 .birthdays {
+    font-family: 'Trebuchet MS', sans-serif;
     margin-left: 430px;
     margin-top: 20px;
     padding-left: 10px;
@@ -146,11 +147,14 @@ body {
     text-align: center;
 }
 
+.birthdays li h3 {
+    position: relative;
+    padding-top: 10px;
+}
+
 .del-btn {
     border: none;
-    background-color: #fbc2f7;
-    position: relative;
-    top: 10%;
+    background-color: transparent;
     font-size: .8em;
     line-height: 4em;
     font-weight: bold;
@@ -163,11 +167,10 @@ body {
 
 .outer {
     position: relative;
-    top: -110px;
     /*X button position*/
-    margin-left: 86%;
-    /*X button position*/
-    width: 35%;
+    top: -125px;
+    left: 89%;
+    width: 30%;
     margin-top: 0%;
     cursor: pointer;
 }
@@ -191,12 +194,12 @@ body {
 }
 
 .inner:before {
-    top: 50%;
+    top: 47%;
     transform: rotate(45deg);
 }
 
 .inner:after {
-    bottom: 50%;
+    bottom: 49%;
     transform: rotate(-45deg);
 }
 
@@ -211,9 +214,12 @@ body {
 }
 
 .outer:hover .inner:before {
-    top: 0;
+    top: 10px;
+    width: 50px;
 }
 
 .outer:hover .inner:after {
-    bottom: 0;
+    bottom: 10px;
+    width: 50px;
+
 }
