@@ -45,7 +45,7 @@ export const BdayTracker = () => {
                     <div className='form-box'>
                         <form className="add-bday" onSubmit={onSubmit}>
                             <div className='text-box'>
-                                <input type="text" placeholder="Birthday" value={birthdate} required onChange={(e) => setBirthdate(e.target.value)} />
+                                <input type="text" placeholder="Birthdate" value={birthdate} required onChange={(e) => setBirthdate(e.target.value)} />
                                 <input type="text" placeholder="Name" value={personName} required onChange={(e) => setPersonName(e.target.value)} />
                                 <input type="text" placeholder="Description" value={description} required onChange={(e) => setDescription(e.target.value)} />
                             </div>

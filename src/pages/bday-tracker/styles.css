@@ -14,14 +14,14 @@ body {
 
 .bday-tracker h1 {
     font-size: 40px;
-    color: #ffffff;
+    color: #fbc2f7;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
 .amt {
-    color: #ffffff;
+    color: #fbc2f7;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -114,6 +114,7 @@ body {
 
 .list-title {
     text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
     color: #fbc2f7;
 }
 
@@ -139,6 +140,8 @@ body {
     background-color: #fbc2f7;
     margin-right: 20%;
     border-radius: 20px;
+    margin-top: 50px;
+    overflow: auto;
 }
 
 .birthdays li {
@@ -148,9 +151,9 @@ body {
 }
 
 .birthdays li h3 {
-    position: relative;
-    padding-top: 10px;
+    padding-top: 0px;
 }
+
 
 .del-btn {
     border: none;
@@ -159,17 +162,17 @@ body {
     line-height: 4em;
     font-weight: bold;
     font-family: 'Trebuchet MS', sans-serif;
-    color: #ce0d0d;
+    color: rgb(11, 0, 21);
     transition: all .3s ease-in;
     opacity: 0;
     cursor: pointer;
 }
 
 .outer {
-    position: relative;
+    position: absolute;
     /*X button position*/
-    top: -125px;
-    left: 89%;
+    top: 0px;
+    right: -91px;
     width: 30%;
     margin-top: 0%;
     cursor: pointer;
@@ -188,7 +191,7 @@ body {
     content: '';
     height: 3px;
     width: inherit;
-    background: #ff077b;
+    background: rgb(11, 0, 21);
     left: 0;
     transition: all .3s ease-in;
 }
